@@ -1,0 +1,548 @@
+/* importamos las fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&family=Yellowtail&display=swap'); /*url:https://fonts.google.com/selection/embed*/
+*{
+    font-family: "Titillium Web"; /* familia fuente*/
+    margin: 0;  /* Elimina todos los márgenes.*/
+    padding: 0;   /*Elimina todos los rellenos.*/
+    cursor: pointer;
+}         
+
+
+/* selector universal *{}*/
+
+html{
+  scroll-behavior: smooth; /*  Por ejemplo, si tienes en tu página anclas para desplazarse a diferentes secciones y aplicas scroll-behavior: smooth;, cuando un usuario haga clic en uno de esos enlaces, el desplazamiento se realizará de forma suave, con una animación que lleva al usuario desde su posición actual hasta la sección correspondiente.*/
+}
+
+
+/*SECCIÓN INICIO*/
+
+.inicio{
+  background-color: linear-gradient(rgba(0,0,0,0.6)); /*linear-gradient degrade de color 0:rojo,0:verde,0:azul,0.6 opacidad del 60% */
+  background-image: url('img/fondo.jpg'); /* imagen de fondo*/
+  background-size: cover; /* La palabra clave (cover) cambiará el tamaño de la imagen de fondo para asegurarse de que el elemento esté completamente cubierto.*/
+  background-position: center; /* La imagen de fondo se colocará en el centro del elemento.*/
+  color: #fff;
+  
+}
+
+.inicio .contenido-seccion{
+  max-width: 1000px;  /* Si la anchura máxima es mayor que la anchura real del elemento, la anchura máxima no tiene ningún efecto. La imagen se ajusta automaticamente al limite de anchura 1000 px*/
+  margin: auto;/*  se utiliza para centrar horizontalmente un elemento dentro de su contenedor. Esto significa que el espacio en blanco (margen) a ambos lados del elemento será igual, lo que resulta en que el elemento esté alineado horizontalmente en el centro de su contenedor.*/
+  text-align: center; /* El contenido del texto está centrado.*/
+  padding: 10px  10px; /* El primer valor es para arriba/abajo
+  El segundo valor es para derecha/izquierda*/ 
+  /* el elemento está centrado horizontalmente con margin: auto;, es posible que no notes el efecto del padding porque el elemento está siendo empujado igualmente hacia el centro del contenedor por la regla margin: auto;. El relleno adicional no se verá claramente porque el elemento ya está centrado horizontalmente en el contenedo*/
+  
+}
+
+
+.inicio .contenido-seccion header{ /* aplica para la cabecera del programa*/
+  padding: 30px; /* Cuando se utiliza el valor 1, el relleno se establece para los 4 lados.*/
+}
+
+/*MENU LATERAL*/
+.inicio .contenido-seccion header nav{
+  position: fixed; /* El elemento no permanecerá en el flujo natural de la página. Se posicionará de acuerdo con la ventana gráfica.*/
+  margin-left: 60px;  /*margen a la izquierda. */
+  background-color: #940253;  
+  padding: 15px;  /*Cuando se utiliza el valor 1, el relleno se establece para los 4 lados.*/
+  text-align: left; /* El contenido del texto se alinea a la izquierda.*/
+  z-index: 99; /* Define el orden de los elementos en el eje z. Solo funciona en elementos posicionados (cualquier cosa aparte de ).static*/
+   /* La diferencia entre usar z-index: 99; y z-index: 1; radica en cómo los elementos se superponen entre sí. Si un elemento tiene z-index: 99; y otro tiene z-index: 1;, el primero estará encima del segundo, ya que tiene un valor de z-index más alto. Esto significa que el elemento con z-index: 99; se mostrará por encima del elemento con z-index: 1; en la página web.*/
+   display: none; /* El elemento se elimina por completo, como si no estuviera en el código HTML en primer lugar.*/
+}
+
+
+.inicio .contenido-seccion header nav a{
+  display: block; /*display:Establece el comportamiento de visualización del elemento.*/ /* display: block El elemento se convierte en un elemento de bloque: comienza en una nueva línea y ocupa todo el ancho.*/
+  color: #fff;
+  text-decoration: none; /* Elimina cualquier decoración de texto.*/
+  margin-bottom: 10px;  /*Define el espacio fuera del elemento, en la parte inferior.*/
+}
+
+.inicio .contenido-seccion header .logo{
+  font-weight: bold;  /* Define el peso del texto.*/ /* El texto se pone en negrita.*/
+  font-size: 2.5rem; /* Define el tamaño del texto.*/
+  font-family: "Yellowtail"; /* familia fuente*/
+  text-shadow:  0 0 35 px #fff;  /* Define la sombra del contenido del texto. El primero es el desplazamiento horizontal
+  el segundo es el desplazamiento vertical, El tercer valor opcional define el desenfoque de la sombra. cuarto es color*/
+}
+
+.inicio .contenido-seccion header .logo .color{ /* Solo aplica a la letra S ya que esa es la que esta en la etiqueta span*/
+color: #940253;
+font-family: "Yellowtail";
+}
+
+.inicio .contenido-seccion header .nav-bar{ 
+
+  position: fixed;
+  background-color: #940253;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Define el radio de las esquinas del elemento.*/
+  line-height: 50px; /* Define la altura de una sola línea de texto.(es el espacio entre lineas) */
+  cursor: pointer;  /* Establece el cursor del ratón al pasar el cursor sobre el elemento.*/
+  transition: .3s; /*Propiedad abreviada para y .transition-propertytransition-durationtransition-timing-functiontransition-delay
+
+  Solo se requiere.transition-duration*/
+}
+
+
+.inicio .contenido-seccion header .nav-bar:hover{ /* Por ejemplo, si tienes un selector .nav-bar:hover, esto significa que se aplicarán los estilos especificados a los elementos con la clase .nav-bar cuando el usuario pase el cursor sobre ellos.*/
+  box-shadow: 0 0 35px #fff; /* Define la sombra del contenido del texto. El primero es el desplazamiento horizontal
+  el segundo es el desplazamiento vertical, El tercer valor opcional define el desenfoque de la sombra. cuarto es color*/
+}
+
+.inicio .contenido-seccion .info{
+  padding-bottom: 130px; /*Define el espacio dentro del elemento, en la parte inferior.*/
+}
+
+.inicio .contenido-seccion .info h1{
+font-size: 3 rem; /*Define el tamaño del texto.*/
+letter-spacing: 10px; /*Define el espaciado entre los caracteres de un bloque de texto.*/
+}
+
+.inicio .contenido-seccion .info h2{
+ font-weight: normal; /* Define el peso del texto.*/ /* El texto se pone normal.*/
+ font-size: 20px; /*Define el tamaño del texto.*/
+ margin-top:  -10px; /*Define el espacio fuera del elemento, en la parte superior. al ser un valor negativo lo hacerca en ves de alejarlo*/
+ letter-spacing: 5px;  /*Define el espaciado entre los caracteres de un bloque de texto.*/
+}
+
+.inicio .contenido-seccion .info .redes{
+  margin: 20px 0px; /* El primer valor es para arriba/abajo
+  El segundo valor es para derecha/izquierda*/
+}
+
+.inicio .contenido-seccion .info .redes a{
+display: inline-block; /*display:Establece el comportamiento de visualización del elemento. */ /* El elemento comparte las propiedades de un elemento en línea y de un elemento de bloque:
+en línea porque el elemento se comporta como texto simple y se inserta en un bloque de texto
+Bloquear porque puede aplicar y valoresheightwidth
+Por ejemplo, este elemento tiene:*/
+text-decoration: none;
+background-color: #000;
+color: #940253;
+border: 1px solid #940253;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+margin: 0 5px;
+transition: .3s;
+
+}
+
+
+.inicio .contenido-seccion .info .redes a:hover{
+color: #fff;
+background-color: #940253;
+box-shadow: 0 0 20px #fff;
+}
+
+.inicio .contenido-seccion .foto{
+  position: relative; /* El elemento permanecerá en el flujo natural de la página.
+  También hace que el elemento se posicione: actuará como punto de anclaje para el bloque absolutamente posicionado.*/
+}
+
+.inicio .contenido-seccion .foto img{
+  max-width: 200px;
+  border-radius: 50%;
+  border: 5px solid #940253; /* El orden es importante:Ancho, estilo, Color*/
+  position: absolute; /* El elemento no permanecerá en el flujo natural de la página. Se posicionará de acuerdo con el ancestro posicionado más cercano.
+  Debido a que está posicionado, actuará como un punto de anclaje para el bloque absolutamente posicionado.*/
+  left: 50%; /* Define la posición del elemento en función de su borde izquierdo.*/
+  top: -100px;  /*Define el espacio fuera del elemento, en la parte superior. al ser un valor negativo lo hacerca en ves de alejarlo*/
+  transform: translateX(-50%); /*transform: Define cómo se transforma el elemento.*//*translateX(): Mueva el elemento en el eje horizontal.*/
+} 
+
+
+/*estilos generales*/
+.titulo-seccion{
+  font-family: "Yellowtail";
+  font-size: 1.5rem; /* Define el tamaño del texto.*/
+}
+
+/*SECCION SOBRE MI*/
+
+.sobremi{
+  background-color: #e6e6e6;
+  padding: 140px 0 100px 0; /* El primer valor es para top
+  El segundo valor es para right
+  El tercer valor es para la parte inferior
+  El cuarto valor es para la izquierda*/
+  text-align: center; /* El contenido del texto está centrado.*/
+}
+
+.sobremi .contenido-seccion{
+  max-width: 1000px;
+  margin: auto; /* el margen izquierdo y derecho del elemento será ajustado automáticamente para que el elemento esté alineado horizontalmente en el centro de su contenedor.*/
+  padding: 0 10px; /* El primer valor es para arriba/abajo
+  El segundo valor es para derecha/izquierda*/
+}
+
+.sobremi .contenido-seccion h3{
+text-transform: uppercase; /*Define cómo se debe transformar el contenido del texto.*/ /* Convierte todas las letras en mayúsculas.*/
+font-size: 30px;
+}
+
+.sobremi .contenido-seccion .especial{
+  color: #940253;
+  font-weight: 700; /* Define el peso del texto. 700 Negritas*/
+  margin-top: 15px;
+}
+
+.sobremi .contenido-seccion p{
+  max-width: 700px; /* Define la anchura máxima que puede tener el elemento.*/
+  margin: auto;
+  color: #666;
+}
+
+.sobremi .contenido-seccion .fila{
+  display: flex; /* El elemento se convierte en un contenedor flexbox. Por sí solo, se comporta como un elemento de bloque.
+  Sus elementos secundarios se convertirán en elementos de flexbox.*/
+  /*display: flex; a este contenedor te permite controlar la distribución de los elementos hijos dentro de él, establecer su alineación, ajustar el espacio entre ellos y definir su orden de visualización, entre otras cosas.*/
+  margin-top: 30px;
+  justify-content: space-around; /* justify-content: Define cómo se alinean los elementos de flexbox/grid según el eje principal, dentro de un contenedor de flexbox/grid.*/  /* justify-content: space-between: El espacio restante se distribuye entre los elementos de la caja flexible/cuadrícula. */
+}
+
+.sobremi .contenido-seccion .fila .col {
+  width: 30%; /* ocupará el 30% del ancho de su contenedor padre */
+}
+
+
+.sobremi .contenido-seccion .fila .col i{
+color: #940253;
+display: inline-block; /* El elemento comparte las propiedades de un elemento en línea y de un elemento flexbox: 
+en línea porque el elemento se comporta como texto simple y se inserta en un bloque de texto
+flexbox porque su elemento secundario se convertirá en elementos de flexbox*/
+/* Esto significa que el elemento se mostrará en línea con otros elementos, pero aún así permitirá ajustar su ancho, alto, márgenes y rellenos como un elemento de bloque*/
+width: 40px;
+height: 40px;
+border: 2px solid #940253;
+line-height: 40px; /* Define la altura de una sola línea de texto.(es el espacio entre lineas) aquí lo usamos para centrar los iconos de el borde */
+border-radius: 50%; /* le damos ese efecto de circulo*/
+}
+
+.sobremi .contenido-seccion .fila .col span{
+  display: block; /*display: Establece el comportamiento de visualización del elemento.*/ /*display: block El elemento se convierte en un elemento de bloque: comienza en una nueva línea y ocupa todo el ancho.*/
+font-weight: bold; /* Define el peso del texto. 700 Negritas o bold es lo mismo*/
+margin: 8px 0 ;   /* El primer valor es para arriba/abajo
+El segundo valor es para derecha/izquierda*/
+}
+
+
+/* PROPIEDADES PARA LA BARRA*/
+.habilidades{
+  padding: 80px 0 100px 0; /* Cuando se utilizan 4 valores:
+  El primer valor es para top
+  El segundo valor es para right
+  El tercer valor es para la parte inferior
+  El cuarto valor es para la izquierda
+  Para recordar el orden, comience en la parte superior y vaya en el sentido de las agujas del reloj.*/
+ text-align: center;
+ background-color: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)); /*se crea un fondo con un degradado lineal que va desde un color negro con una opacidad del 30% hasta otro color negro con la misma opacidad del 30%. Esto generará un efecto de sombra o transparencia sobre el fondo existente, dependiendo del elemento al que se aplique esta regla CSS.
+ */
+background-image: url("img/habilidades.jpg"); /* imagen de fondo*/
+ background-size: cover; /* Define el tamaño de la imagen de fondo*/ /* La palabra clave cambiará el tamaño de la imagen de fondo para asegurarse de que el elemento esté completamente cubierto*/
+background-attachment: fixed; /* La imagen de fondo no se desplazará con la página y permanecerá colocada de acuerdo con la ventanilla. También se posicionará y cambiará de tamaño de acuerdo con la ventana gráfica. Como resultado, es probable que la imagen de fondo solo sea visible parcialmente.*/
+background-position: center center; /*  se utiliza para especificar la posición de fondo de un elemento. En este caso, center se usa dos veces para asegurarse de que tanto el eje horizontal como el vertical estén centrados.
+La primera aparición de center se refiere a la posición horizontal, y la segunda aparición se refiere a la posición vertical.*/
+color: #fff;
+}
+
+.habilidades .contenido-seccion{
+  max-width: 1000px;
+  margin: auto; /* el margen izquierdo y derecho del elemento será ajustado automáticamente para que el elemento esté alineado horizontalmente en el centro de su contenedor.*//*  Margin (margen): La propiedad margin se utiliza para controlar el espacio exterior alrededor del borde de un elemento. Es decir, establece la distancia entre el borde exterior del elemento y los elementos adyacentes. El margen crea espacio en blanco entre los elementos en la página.*/
+  padding: 0 10px; /* El primer valor es para arriba/abajo
+  El segundo valor es para derecha/izquierda*/
+  /* Padding (relleno): La propiedad padding se utiliza para controlar el espacio dentro del borde de un elemento. Es decir, establece la distancia entre el borde del elemento y su contenido. El relleno aumenta o disminuye el espacio interno de un elemento sin afectar su tamaño total.*/
+}
+
+.habilidades .contenido-seccion h3{
+
+  text-transform: uppercase; /*Mayusculas*/
+  font-size: 30px; /*Tamaño letra*/
+}
+
+
+.habilidades .contenido-seccion .fila {
+
+  /* .habilidades .contenido-seccion .fila, display: flex; se aplica para convertir el contenedor .fila en un contenedor flex, lo que permite distribuir los elementos secundarios horizontalmente con justify-content: space-between;.*/
+  display: flex; /* El elemento se convierte en un contenedor flexbox. Por sí solo, se comporta como un elemento de bloque.
+Sus elementos secundarios se convertirán en elementos de flexbox.*/
+/*display: flex; a este contenedor te permite controlar la distribución de los elementos hijos dentro de él, establecer su alineación, ajustar el espacio entre ellos y definir su orden de visualización, entre otras cosas.*/
+justify-content: space-between; /* justify-content: Define cómo se alinean los elementos de flexbox/grid según el eje principal, dentro de un contenedor de flexbox/grid.*/  /* justify-content: space-between: El espacio restante se distribuye entre los elementos de la caja flexible/cuadrícula. */
+margin-top: 30px;
+}
+
+
+.habilidades .contenido-seccion .fila .col{
+  width: 47%;
+align-items: center; /*Alinea el texto al centro.*/
+}
+
+.habilidades .contenido-seccion .fila .col .cont-barra{
+  display: flex; /* El elemento se convierte en un contenedor flexbox. Por sí solo, se comporta como un elemento de bloque.
+  Sus elementos secundarios se convertirán en elementos de flexbox.*/
+  /*display: flex; a este contenedor te permite controlar la distribución de los elementos hijos dentro de él, establecer su alineación, ajustar el espacio entre ellos y definir su orden de visualización, entre otras cosas.*/
+  align-items: center; /* align-items: Define cómo se alinean los elementos de flexbox según el eje transversal, dentro de una línea de un contenedor de flexbox.*/ /* align-items: center;  Los elementos de flexbox se alinean en el centro del eje transversal.
+  De forma predeterminada, el eje transversal es vertical. Esto significa que los elementos de la caja flexible se centrarán verticalmente.*/
+}
+
+.habilidades .contenido-seccion .barra{
+  /* .habilidades .contenido-seccion .barra, display: flex; se utiliza para convertir el contenedor .barra en un contenedor flex, lo que permite alinear verticalmente los elementos hijos dentro de .barra con align-items: center;*/
+  display: flex; /* El elemento se convierte en un contenedor flexbox. Por sí solo, se comporta como un elemento de bloque.
+  Sus elementos secundarios se convertirán en elementos de flexbox.*/
+  /*display: flex; a este contenedor te permite controlar la distribución de los elementos hijos dentro de él, establecer su alineación, ajustar el espacio entre ellos y definir su orden de visualización, entre otras cosas.
+  border: 1px solid #940253;
+  padding: 2px;
+  border-radius: 3px;
+  margin-right: 10px; */
+  border: 1px solid #940253;
+  padding: 2px; /* Cuando se utiliza el valor 1, el relleno se establece para los 4 lados.*/
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+
+.habilidades .contenido-seccion .barra .e{
+  background-color: #363636;
+  width: 20px;
+  height: 30px;
+  margin-right: 2px;
+}
+
+
+/*SECCIÓN RESUMEN*/
+
+.resumen{
+  background-color: rgba(241, 237, 249, 0.469);
+  padding: 140px 0 100px 0;
+  text-align: center;
+}
+
+.resumen.contenido-seccion{
+  max-width: 1000px;
+  margin: auto; /* el margen izquierdo y derecho del elemento será ajustado automáticamente para que el elemento esté alineado horizontalmente en el centro de su contenedor.*//*  Margin (margen): La propiedad margin se utiliza para controlar el espacio exterior alrededor del borde de un elemento. Es decir, establece la distancia entre el borde exterior del elemento y los elementos adyacentes. El margen crea espacio en blanco entre los elementos en la página.*/
+  padding: 0 10px; /*le indico a la derecha e izquierda*/
+}
+
+
+.resumen .contenido-seccion h3{
+  text-transform: uppercase; /*Mayusculas*/
+  font-size: 30px; /*Tamaño letra*/
+}
+
+.resumen .contenido-seccion .info{
+  text-align: left;  /* El contenido del texto se alinea a la izquierda.*/
+  display: flex; /* El elemento se convierte en un contenedor flexbox. Por sí solo, se comporta como un elemento de bloque.
+  Sus elementos secundarios se convertirán en elementos de flexbox.*/
+  /*display: flex; a este contenedor te permite controlar la distribución de los elementos hijos dentro de él, establecer su alineación, ajustar el espacio entre ellos y definir su orden de visualización, entre otras cosas.*/ /* Cuando se dice que el elemento se comporta como un "elemento de bloque", significa que ocupa todo el ancho disponible y comienza en una nueva línea, similar a los elementos de bloque tradicionales como los párrafos o las divisiones *//*
+  display: block;: Hace que el elemento ocupe todo el ancho disponible y comience en una nueva línea. Los elementos de bloque, como los párrafos (<p>) y las divisiones (<div>), se comportan de esta manera de forma predeterminada.
+  display: flex;: También hace que el elemento ocupe todo el ancho disponible, pero permite un control más flexible sobre la disposición y el diseño de sus elementos secundarios mediante propiedades de Flexbox como justify-content, align-items, flex-direction, entre otras.*/
+  justify-content: space-between; /* justify-content: Define cómo se alinean los elementos de flexbox/grid según el eje principal, dentro de un contenedor de flexbox/grid.*/  /* justify-content: space-between: El espacio restante se distribuye entre los elementos de la caja flexible/cuadrícula. */
+  margin-top: 30px;
+}
+
+.resumen .contenido-seccion .info .col{
+  width: 45%; /* es una manera de controlar el ancho de un elemento de forma relativa en lugar de absoluta, lo que facilita la adaptación del diseño a diferentes dispositivos y resoluciones de pantalla.*/
+}
+
+.resumen .contenido-seccion .info .col .titulo{
+  display: inline-block; /*display:Establece el comportamiento de visualización del elemento. */ /* El elemento comparte las propiedades de un elemento en línea y de un elemento de bloque:
+
+  en línea porque el elemento se comporta como texto simple y se inserta en un bloque de texto
+  Bloquear porque puede aplicar y valores: height; width;
+  /*La propiedad display: inline-block; en CSS se utiliza para hacer que un elemento se comporte como un elemento en línea, pero que también tenga propiedades de un elemento de bloque.
+  
+  Cuando aplicas display: inline-block; a un elemento, este elemento se muestra en la misma línea que los elementos en línea, pero al mismo tiempo permite ajustar su ancho, alto, márgenes y rellenos como si fuera un elemento de bloque.*/
+}
+
+.resumen .contenido-seccion .info .col table{
+  margin-top: 30px;
+  border-collapse: collapse; /* border-collapse: Define si los bordes de la tabla deben separarse o contraerse.*/ 
+  /*border-collapse: collapse;   Las celdas de tabla adyacentes fusionarán sus bordes.
+  La celda que aparezca primero en el código "ganará": sus bordes enmascararán los de las siguientes celdas.*/
+}
+
+.resumen .contenido-seccion .info .col table .datos{
+  width: 40%;
+  border-bottom: 1px solid #bab9b9; 
+  /*El orden es importante:
+  Ancho
+  estilo
+  Color*/
+}
+
+.resumen .contenido-seccion .info .col table h4{
+  margin-top: 10px;
+}
+
+.resumen .contenido-seccion .info .col table h3{
+  font-size: 20px;
+  margin-bottom: 5px; /*Define el espacio fuera del elemento, en la parte inferior.*/
+}
+
+.resumen .contenido-seccion .info .col table p{
+  font-size: 14px;
+}
+
+.resumen .contenido-seccion .info .col table .promedio{
+  display: block; /* display: block;: Hace que el elemento ocupe todo el ancho disponible y comience en una nueva línea. Los elementos de bloque, como los párrafos (<p>) y las divisiones (<div>), se comportan de esta manera de forma predeterminada.*/
+  color: #940253;
+  margin-top: 10px;
+  font-weight: bold; /*Peso letra: letra negrita de esta manera conseguimos un color oscuro intenso.*/
+
+}
+
+
+.resumen .contenido-seccion .info .col table .descripcion{
+  border-left: 1px solid #bab9b9;  /* Borde izquierdo unicamente.*/
+  padding-left: 20px; 
+}
+
+
+
+
+/* SECCION CONTACTO */
+.contacto{
+  background-color: #202020;
+  padding: 140px 0 100px 0;
+  color: #e6e6e6; 
+  text-align: center;
+}
+
+.contacto .contenido-seccion{
+  max-width: 1000px; /* 
+   aplicar max-width: 1000px; después de text-align: center; podría parecer contraproducente si el objetivo es simplemente alinear el texto al centro. Sin embargo, la combinación de ambas propiedades puede tener sentido en ciertos casos, dependiendo del diseño general de la página.
+  La propiedad text-align: center; se utiliza principalmente para alinear el contenido de un elemento (como texto) horizontalmente en el centro de su contenedor. Por otro lado, max-width: 1000px; establece el ancho máximo que puede tener el elemento antes de que comience a reducir su tamaño.*//*
+   La combinación de ambas propiedades puede ser útil cuando se desea centrar el contenido dentro de un área definida y limitar su ancho máximo para que no ocupe demasiado espacio en pantallas más anchas. Por ejemplo, si tienes una sección en tu página que contiene texto que debe estar centrado pero no debe ocupar toda la anchura disponible en pantallas grandes, esta combinación de propiedades puede ser útil.*/
+   margin: auto; /* se utiliza para centrar horizontalmente un elemento dentro de su contenedor. Esto significa que el espacio en blanco (margen) a ambos lados del elemento será igual, lo que resulta en que el elemento esté alineado horizontalmente en el centro de su contenedor.*/
+   padding: 0 10px; /* El primer valor es para arriba/abajo
+   El segundo valor es para derecha/izquierda*/
+}
+
+.contacto .contenido-seccion h3{
+  text-transform: uppercase; /*Mayusculas*/
+  font-size: 30px;
+}
+
+.contacto .contenido-seccion .fila{
+  display: flex; /* El elemento se convierte en un contenedor flexbox. Por sí solo, se comporta como un elemento de bloque.
+   Sus elementos secundarios se convertirán en elementos de flexbox.*/
+   /*display: flex; a este contenedor te permite controlar la distribución de los elementos hijos dentro de él, establecer su alineación, ajustar el espacio entre ellos y definir su orden de visualización, entre otras cosas.*/ /* Cuando se dice que el elemento se comporta como un "elemento de bloque", significa que ocupa todo el ancho disponible y comienza en una nueva línea, similar a los elementos de bloque tradicionales como los párrafos o las divisiones *//*
+   display: block;: Hace que el elemento ocupe todo el ancho disponible y comience en una nueva línea. Los elementos de bloque, como los párrafos (<p>) y las divisiones (<div>), se comportan de esta manera de forma predeterminada.
+   display: flex;: También hace que el elemento ocupe todo el ancho disponible, pero permite un control más flexible sobre la disposición y el diseño de sus elementos secundarios mediante propiedades de Flexbox como justify-content, align-items, flex-direction, entre otras.*/
+   justify-content: space-around; /* justify-content: Define cómo se alinean los elementos de flexbox/grid según el eje principal, dentro de un contenedor de flexbox/grid.*/ /* justify-content: space-around; El espacio restante se distribuye alrededor de los elementos de la caja flexible/cuadrícula: esto agrega espacio antes del primer elemento y después del último.*/
+}
+
+
+
+.contacto .contenido-seccion .fila .col{
+  margin-top: 50px;
+}
+.contacto .contenido-seccion .fila .col h2{
+  color: #940253;
+}
+
+/* SECCION RESPONSIVE */
+
+
+/*Cuando se aplica @media screen, los estilos se aplicarán a dispositivos que tengan una pantalla, independientemente de su resolución específica. El uso de @media screen garantiza que los estilos se adapten correctamente a dispositivos como computadoras de escritorio, laptops, tabletas y teléfonos inteligentes, independientemente de su tamaño o resolución de pantalla.
+and es el operador logico como && 
+*/
+
+/*
+.habilidades .contenido-seccion .fila: Establece que, cuando la pantalla tenga un ancho máximo de 800 píxeles, los elementos con la clase .fila dentro de la sección de habilidades (habilidades) se mostrarán como bloques, uno debajo del otro.
+
+.habilidades .contenido-seccion .fila .col: Hace que las columnas dentro de las filas de habilidades (fila) ocupen el 100% del ancho disponible y se centren en la pantalla.
+
+.habilidades .contenido-seccion .fila .col .cont-barra: Centra el contenido de la barra de habilidades dentro de las columnas.
+
+.sobremi .contenido-seccion .fila: Similar al primer punto, hace que las filas dentro de la sección "Sobre mí" se muestren como bloques.
+
+.sobremi .contenido-seccion .fila .col: Establece que las columnas dentro de las filas de "Sobre mí" ocupen el 80% del ancho disponible, con un margen automático en los lados y un margen superior de 20 píxeles.
+
+.resumen .contenido-seccion .info: Hace que los elementos con la clase .info dentro de la sección de resumen (resumen) se muestren como bloques.
+
+.resumen .contenido-seccion .info .col: Las columnas dentro de la sección de resumen se ajustan al 90% del ancho disponible, centradas horizontalmente.
+
+.resumen .contenido-seccion .info .col .titulo: Alinea los títulos dentro de las columnas al centro.
+
+.resumen .contenido-seccion .info .col table: Aplica un margen superior de 10 píxeles y un margen inferior de 30 píxeles a las tablas dentro de las columnas de la sección de resumen.
+
+.contacto .contenido-seccion .fila: Similar a los puntos anteriores, hace que las filas dentro de la sección de contacto se muestren como bloques.
+
+Estos estilos garantizan que el diseño del sitio web se ajuste adecuadamente cuando se visualiza en dispositivos con una pantalla más estrecha, como teléfonos móviles o tabletas.
+*/
+@media screen and (max-width:800px){
+  .habilidades .contenido-seccion .fila{
+      display: block;
+  }
+  .habilidades .contenido-seccion .fila .col{
+      width: 100%; /*ocupa el 100% del ancho disponible*/
+      text-align: center; /*centra el texto*/
+  } 
+  .habilidades .contenido-seccion .fila .col .cont-barra{
+    justify-content: center;/*Los elementos de flexbox/grid están centrados a lo largo del eje principal del contenedor. Centra las columnas cuando el ancho del viewport  cundo se aplica el dispaly:block*/
+  }
+  .sobremi .contenido-seccion .fila{
+      display: block; 
+  }
+  .sobremi .contenido-seccion .fila .col{
+      width: 80%;
+      margin: auto; /*  se utiliza para centrar horizontalmente un elemento dentro de su contenedor. Esto significa que el espacio en blanco (margen) a ambos lados del elemento será igual, lo que resulta en que el elemento esté alineado horizontalmente en el centro de su contenedor.*/
+      margin-top: 20px;
+  }
+  .resumen .contenido-seccion .info{
+      display: block;
+  }
+  .resumen .contenido-seccion .info .col{
+      width: 90%;
+      margin: auto; /*  se utiliza para centrar horizontalmente un elemento dentro de su contenedor. Esto significa que el espacio en blanco (margen) a ambos lados del elemento será igual, lo que resulta en que el elemento esté alineado horizontalmente en el centro de su contenedor.*/
+  }
+  .resumen .contenido-seccion .info .col .titulo{
+      display: block; /* En CSS, cuando se especifica un estilo para un selector más específico, este estilo prevalecerá sobre el estilo de un selector menos específico. En este caso, aunque se haya aplicado display: block a .resumen .contenido-seccion .info, al especificar display: block específicamente para .resumen .contenido-seccion .info .col .titulo, se está asegurando de que los elementos con la clase .titulo dentro de .resumen .contenido-seccion .info .col se muestren como bloques, incluso si ya se ha aplicado un estilo a otros elementos dentro de .resumen .contenido-seccion .info. Esto permite un mayor control y personalización de la apariencia de elementos específicos dentro de la estructura de la página.*/
+      text-align: center;
+  }
+  .resumen .contenido-seccion .info .col table{
+      margin-top: 10px;
+      margin-bottom: 30px; /*Define el espacio fuera del elemento, en la parte inferior.*/
+  }
+  .contacto .contenido-seccion .fila{
+      display: block;
+  }
+}
+
+
+/*Un sitio web "responsive" es aquel que está diseñado y desarrollado de tal manera que se adapta y se muestra correctamente en una variedad de dispositivos y tamaños de pantalla, incluyendo computadoras de escritorio, portátiles, tabletas y teléfonos móviles.
+
+Las características de un diseño web responsive incluyen:
+
+Flexibilidad: Los elementos del sitio web, como imágenes, texto y diseño general, se ajustan dinámicamente para adaptarse al tamaño de la pantalla del dispositivo en el que se está visualizando.
+
+Navegación intuitiva: La navegación y la interacción con el sitio web son cómodas y fáciles, independientemente del dispositivo utilizado. Los menús y botones son lo suficientemente grandes para hacer clic/tocar con precisión en pantallas táctiles.
+
+Contenido legible: El texto y otros contenidos son legibles sin necesidad de hacer zoom o desplazamiento horizontal en pantallas pequeñas.
+
+Optimización de carga: Se minimiza el tiempo de carga de la página y se optimiza el rendimiento para dispositivos móviles, lo que garantiza una experiencia de usuario fluida incluso en conexiones de internet más lentas.
+
+Compatibilidad con diferentes navegadores y sistemas operativos: El diseño es compatible con una amplia gama de navegadores web y sistemas operativos para garantizar una experiencia consistente para todos los usuarios.
+
+Que un sitio se muestre bien en dispositivos móviles significa que todos los elementos y el contenido del sitio web se ajustan adecuadamente a la pantalla del dispositivo, sin necesidad de hacer zoom ni de desplazarse horizontalmente para ver toda la información. Aquí tienes un ejemplo:
+
+Imagina que tienes un sitio web con un menú de navegación en la parte superior, algunas imágenes y texto en el cuerpo de la página, y un formulario de contacto al final. En un dispositivo de pantalla grande, como una computadora de escritorio, estos elementos se mostrarían en su distribución estándar.
+
+Sin embargo, en un dispositivo móvil, el diseño se ajustaría de la siguiente manera:
+
+Menú de navegación: En lugar de mostrar un menú horizontal en la parte superior, se puede convertir en un menú desplegable o hamburguesa que se puede abrir y cerrar fácilmente con un toque.
+
+Imágenes y texto: El contenido se ajusta para que las imágenes no se desborden de la pantalla y el texto se ajuste al ancho de la pantalla, evitando que sea necesario desplazarse horizontalmente para leerlo.
+
+Formulario de contacto: Los campos del formulario y los botones se ajustan para que sean lo suficientemente grandes como para hacer clic o tocar fácilmente con los dedos, y el formulario en sí puede estar dispuesto en una sola columna en lugar de en varias filas.
+
+En resumen, un sitio web que se muestra bien en dispositivos móviles es aquel que ha sido diseñado y desarrollado teniendo en cuenta las necesidades y restricciones de las pantallas más pequeñas, proporcionando una experiencia de usuario intuitiva y fácil de usar en cualquier dispositivo.
+
+*/
